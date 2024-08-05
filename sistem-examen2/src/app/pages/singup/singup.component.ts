@@ -28,5 +28,16 @@ export class SingupComponent implements OnInit{
       alert('el nombre de usuario es reqierido');
       return;
     }
+    this.userService.añadirUsuario(this.user).subscribe(
+      (data)=>{
+        console.log(data);
+        alert('usuario guardado con exito');
+      },(error)=>{
+        console.log(error);
+        alert('a ocurrido un error')
+
+      }
+    )
+
   }
 }
