@@ -19,6 +19,9 @@ import { LoginComponent } from './pages/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UserDashboarComponent } from './pages/user/user-dashboar/user-dashboar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { HomeComponent } from './pages/home/home.component';
     SingupComponent,
     LoginComponent,
     HomeComponent,
+    DashboardComponent,
+    UserDashboarComponent,
 
   ],
   imports: [
@@ -45,6 +50,7 @@ import { HomeComponent } from './pages/home/home.component';
 
   ],
   providers: [
+    authInterceptorProviders,
     provideClientHydration(),
     provideAnimationsAsync()
   ],
