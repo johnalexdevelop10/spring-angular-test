@@ -22,6 +22,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboarComponent } from './pages/user/user-dashboar/user-dashboar.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { UserDashboarComponent } from './pages/user/user-dashboar/user-dashboar.
     HomeComponent,
     DashboardComponent,
     UserDashboarComponent,
+    ProfileComponent,
+    SidebarComponent,
 
   ],
   imports: [
@@ -46,7 +51,9 @@ import { UserDashboarComponent } from './pages/user/user-dashboar/user-dashboar.
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
+
 
   ],
   providers: [
